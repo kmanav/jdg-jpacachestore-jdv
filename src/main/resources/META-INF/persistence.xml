@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                                http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+    <persistence-unit name="jdg-jpa-jdv-cachestore-app">
+        <class>org.everythingjboss.jdv.model.Customer</class>    
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:teiid:dvdemo@mm://localhost:31000;disableLocalTxn=true"/>
+            <property name="hibernate.connection.username" value="teiidUser"/>
+            <property name="hibernate.connection.password" value="redhat1!"/>
+            <property name="hibernate.connection.driver_class" value="org.teiid.jdbc.TeiidDriver"/>
+            <property name="hibernate.dialect" value=" org.teiid.dialect.TeiidDialect"/>
+            <property name="hibernate.connection.driver_class" value="org.teiid.jdbc.TeiidDriver"/>
+            <property name="hibernate.default_schema" value="Customers"/>
+        </properties>    
+    </persistence-unit>
+</persistence>
