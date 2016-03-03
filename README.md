@@ -8,8 +8,8 @@ The enterprise data is spread over mutiple data sources. There is a need to get 
  * JDV provides real time access to the underlying data sources 
  * JDV can expose a view that takes care of all the complexities involved in data transformation that one would have to otherwise handle in application code
 * Use JBoss Data Grid (JDG) for Enterprise Caching needs
- * Using JDG's JPA Cache Store in embedded mode, one can using an existing relational table to load (store) the data into (out of) a cache
- * The JPA Cache Store hides the complexities of transforming the relational roles into Java objects and store/retrive from cache
+ * Using JDG's JPA Cache Store in embedded mode, one can using an existing relational table to load (store) the data into (from) a cache
+ * The JPA Cache Store hides the complexities of transforming the relational result set (rows) into Java objects and store/retrive from cache
 
 ### Prerequisites
 * Knowledge of how to deploy a VDB (virtual database) onto JDV runtime
