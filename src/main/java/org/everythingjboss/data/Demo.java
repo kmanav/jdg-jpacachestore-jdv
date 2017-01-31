@@ -23,11 +23,12 @@ public class Demo {
                     .persistenceUnitName("jdg-jpa-jdv-cachestore-app")
                     .entityClass(Customer.class)
                     .preload(true)
-                .eviction().maxEntries(100)
                 .build();
         EmbeddedCacheManager cm = new DefaultCacheManager(cacheConfig);
         Cache<String,Customer> customerCache = cm.getCache();
         assertTrue(FAIL_MESSAGE,customerCache.size() == 35);
+        customerCache.values().forEach(System.out::println);
+        cm.stop();
     }
     
 }

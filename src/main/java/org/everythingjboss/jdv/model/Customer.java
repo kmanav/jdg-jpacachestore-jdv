@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.lang.String;
 import javax.persistence.*;
 
+import com.google.gson.Gson;
+
 @Entity
 @Table(name="all_customers")
 public class Customer implements Serializable {
@@ -60,5 +62,9 @@ public class Customer implements Serializable {
     public void setCountry(String Country) {
         this.Country = Country;
     }
-   
+
+    public String toString() {
+        Gson gson = new Gson();
+        return gson.toJson(this);
+    }
 }
